@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 articleURL = "http://curia.europa.eu/juris/document/document.jsf?text=&docid=139407&pageIndex=0&doclang=EN&mode=lst&dir=&occ=first&part=1&cid=52454"
-
+articleURL = "https://www.reddit.com/r/science/comments/9cv8lu/people_who_are_more_welloff_were_made_happier/"
 
 def getText(url):
     page = urlopen(url).read().decode('utf8', 'ignore')
@@ -14,8 +14,9 @@ def getText(url):
 text = getText(articleURL)
 
 import nltk
-# nltk.download('punkt')
-# nltk.download()
+#nltk.download('punkt')
+#nltk.download('stopwords')
+#nltk.download()
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.probability import FreqDist
